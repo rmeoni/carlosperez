@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carlos Perez</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.combinedScroll.js' %>
+  <%= csrf_meta_tags %>
+  <meta name="author" content="Sofinteractive" />
+  <meta name="description" content="Carlos Perez Autist Artist" />
+	<meta name="keywords"  content="Parallax, sofinteractive, one page website" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   	<!--font awesome-->
+  <script src="https://use.fontawesome.com/811422e9bc.js"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet"> 
+       <!-- mobile -->
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="bs-over">
+	<div id="top">
+	</div>
+		<div class="mobile-menu">
+			<ul class="menu">
+				<li id="icon-close"><i class="material-icons">close</i></li>
+				<li><a href="#section1">home</a></li>
+				<li><a href="#section2">gallery</a></li>
+				<li><a href="#section3">about</a></li>
+				<li><a href="#section4">contact</a></li>
+				<li><a href="/">blog</a></li>
+				<li><a href="/"><i class="material-icons">vpn_key</i></a></li>
+			</ul>
+		</div>
+	<div class="page-nav">
+		<ul class="nav pull-left" id="logo">
+			<li>Carlos Perez</li>
+		</ul>
+		<ul class="nav pull-right" id="desktop">
+			<li><a href="#section1">home</a></li>
+			<li><a href="#section2">gallery</a></li>
+			<li><a href="#section3">about</a></li>
+			<li><a href="#section4">contact</a></li>
+			<li><a href="/">blog</a></li>
+			<li><a href="/"><i class="material-icons">vpn_key</i></a></li>
+		</ul>
+		<ul class="nav pull-right" id="mobile">
+			<li id="icon-menu"><i class="material-icons" id="icon-menu">menu</i></li>
+		</ul>
+	</div>
+<%= yield %>
+	
+	<div class="pre-footer">
+		<div class="container">
+			<ul class="footer-nav">
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+</a></li>
+				<li><a href="#"<i class="fa fa-envelope" aria-hidden="true"></i></a>
+</li>
+				<li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>
+</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<p>Powered by <a href="http://www.sofinteractive.com" target="_blank"><img src="/images/sofiblanco.png" width="35px"/> Sofinteractive</a></p>
+		</div>
+	</div>
+
+	<!-- Latest compiled and minified JavaScript for bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- mobile nav bar -->
+	<script type="text/javascript">
+	
+	var main = function() {
+
+	
+    $('.dropdown-toggle').dropdown();	
+
+	/* Push the body and the nav over by 480px over */
+  $('#icon-menu').click(function() {
+    $('.menu').animate({
+      right: "0px"
+    }, 200);
+
+    $('body').animate({
+      right: "220px"
+    }, 200);
+
+  });
+
+  /* Then push them back */
+  $('#icon-close').click(function() {
+    $('.menu').animate({
+      right: "-220px"
+    }, 200);
+
+    $('body').animate({
+      right: "0px"
+    }, 200);
+});
+
+  $('.mobile-menu').click(function() {
+      $('.menu').animate({
+        right:"-280px"
+      },200);
+
+      $('body').animate({
+      right: "0px"
+    }, 200);
+});
+
+};
+$(document).ready(main);
+
+	</script>
+	<!--scrolling nav-->
+   	<script type="text/javascript">
+		var main = function() {
+ 
+  	// Hook up the current state to the nav bar
+  		$('.nav').onePageNav();
+  		$('.mobile-menu').onePageNav();
+  				
+         };
+
+      $(document).ready(main);
+	</script>
+</body>
+</html>
