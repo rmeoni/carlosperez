@@ -1,9 +1,15 @@
-<div class="col-md-4 col-xs-4 col-md-offset-8 col-xs-offset-3">
+<div class="session">
+	<div class="container">
+		<div class="app-nav">
+			<a href="/"><i class="material-icons">chevron_left</i></a>
+		</div>
+<div class="col-md-4 col-xs-12 col-md-offset-8 col-xs-offset-3">
 	<% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: name %>
     <% end %>
 </div>
 <div class="login-form">
+	<h2>Login</h2>
 	<%=form_for(:session, url: login_path) do |f| %>
 	<%= f.email_field :email, :placeholder => "Email" %>
 	<%= f.password_field :password, :placeholder => "Password" %>
@@ -11,4 +17,6 @@
 		<%= f.submit "Log in", class: "btn-submit" %>
 	<% end %>
 	</div>
+</div>
+</div>
 </div>

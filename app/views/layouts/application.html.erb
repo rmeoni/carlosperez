@@ -25,19 +25,28 @@
 	<div id="top">
 	</div>
 		<div class="mobile-menu">
+			<div class="login-key">
+			<% unless current_user %>
+				<a href="/login"><i class="material-icons" id="login-key">vpn_key</i></a>
+				<% end %>
+				<% if current_user %>
+			<%= link_to logout_path, method: "delete" do %>
+					<i class="material-icons">exit_to_app</i>
+				<% end %>
+			<% end %>
+			</div>
 			<ul class="menu">
 				<li id="icon-close"><i class="material-icons">close</i></li>
-				<li><a href="#section1">home</a></li>
+				<li><a href="/">home</a></li>
 				<li><a href="#section2">gallery</a></li>
 				<li><a href="#section3">about</a></li>
 				<li><a href="#section4">contact</a></li>
 				<li><a href="/">blog</a></li>
-				<li><a href="/"><i class="material-icons">vpn_key</i></a></li>
 			</ul>
 		</div>
 	<div class="page-nav">
 		<ul class="nav pull-left" id="logo">
-			<li>Carlos Jesus Perez</li>
+			<li><a href="/">Carlos Jesus Perez</a></li>
 		</ul>
 		<ul class="nav pull-right" id="desktop">
 			<li><a href="#section1">home</a></li>
@@ -45,7 +54,6 @@
 			<li><a href="#section3">about</a></li>
 			<li><a href="#section4">contact</a></li>
 			<li><a href="/">blog</a></li>
-			<li><a href="/"><i class="material-icons">vpn_key</i></a></li>
 		</ul>
 		<ul class="nav pull-right" id="mobile">
 			<li id="icon-menu"><i class="material-icons" id="icon-menu">menu</i></li>
@@ -124,7 +132,7 @@ $(document).ready(main);
  
   	// Hook up the current state to the nav bar
   		$('.nav').onePageNav();
-  		$('.mobile-menu').onePageNav();
+  		$('.menu').onePageNav();
   				
          };
 

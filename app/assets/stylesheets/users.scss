@@ -1,3 +1,88 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user .jumbotron {
+	min-height: 600px;
+	background-image: url("/images/SAM_0527.jpg") ;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+#bs-over .jumbotron h1 {
+	padding-top: 20px;
+	color: #fff;
+}
+
+#bs-over .user .app-nav {
+	padding-top:65px;
+}
+
+#bs-over .user .app-nav i {
+	color: #fff;
+	font-size: 50px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	transition: border-color .5s;
+}
+
+#bs-over .user .app-nav i:hover {
+	border: 3px solid #4CAF50;
+}
+
+.user .signup-form {
+	color:#000;
+}
+
+#bs-over .user input {
+	background-color: #fff;
+	margin: 15px;
+	margin-left: 0px;
+	padding:10px;
+	display: block;
+	border: 0px;
+	border-bottom: 3px solid #000; 
+	transition: border-bottom 0.5s;
+}
+
+#bs-over .user input:focus, input:hover {
+	border-bottom: 3px solid #DD4954;
+}
+
+
+#bs-over .user .submit input {
+	background-color: #000;
+	color:#fff;
+	border: 2px solid #000;
+}
+
+#bs-over .user .submit input:hover {
+	cursor: pointer;
+	background-color: #DD4954;
+	color:#fff;
+	border: 2px solid #DD4954;
+	transition: color .5s;
+}
+
+.user-info {
+	margin: 40px 0px 40px 0px; 
+	text-align: center;
+}
+
+.user-info ul {
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+	display: inline-block;
+}
+
+.user-info li {
+	padding-left: 10px;
+}
+
+.users .col-md-3 {
+	border: 3px solid #77D5F7 ;
+	margin: 10px;
+	background-color: #fff;
+}
