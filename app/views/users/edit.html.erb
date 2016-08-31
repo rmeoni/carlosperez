@@ -1,0 +1,29 @@
+<div class ="user">
+	<div class="container">
+		<div class="app-nav">
+				<%= link_to :back do %>
+				<i class="material-icons">chevron_left</i>
+				<% end %>
+			</div>
+		<div class="edit-form">
+			<%= form_for(@user) do |u| %>
+			<div class ="form-group">
+				<label for ="first"> First Name </label>
+				<%= u.text_field :first_name %>
+				<label for="last"> Last Name </label>
+				<%= u.text_field :last_name %>
+				<label for="email"> email </label>
+				<%= u.email_field :email %>
+				<% if current_user && current_user.super?() %>
+				<label for="role"> Role </label>
+				<%= u.text_field :role %>
+				<% end %>
+				<div class="submit">
+				<%= u.submit "Update", :class => "btn-submit" %>
+				<% end %> 
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

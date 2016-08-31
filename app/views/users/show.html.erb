@@ -1,0 +1,19 @@
+<div class="user">
+	<div class="container">
+		<div class="user-info">
+			<img class="img-circle" src="/images/art/default-profile-picture.jpg" width="150px">
+			<ul>
+				<li><h3><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %> <%= link_to edit_user_path(current_user) do %>
+					<% if current_user %>
+					<i class="material-icons">mode_edit</i>
+					<% end %>
+					<% end %>
+					</h3> 
+				</li>
+				<li><h5><%= @user.email %></h5></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear-fix">
+</div>
