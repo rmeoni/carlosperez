@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   get '/' => 'pages#index', as: :root
 
+  get '/signup' => 'users#new'
+  get '/users' => 'users#index', as: :users
+
+  get '/login' => 'sessions#new'
+  post '/login' =>'sessions#create' 
+  delete 'logout' => 'sessions#destroy'
+
+  resources :users, only: [:index, :edit, :update, :create, :destroy]
+
    get "*missing" => redirect("/")
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
