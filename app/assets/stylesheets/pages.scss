@@ -195,6 +195,27 @@
 	color: #333;
 }
 
+#bs-over .gallery .app-nav a{
+	color: #888;
+	display: inline-block;
+}
+
+#bs-over .gallery .app-nav p {
+	display: inline-block;
+	font-size: 1.4em;
+	padding-bottom: 10px;
+}
+
+#bs-over .gallery .app-nav i {
+	color: #F44336;
+	font-size: 50px;
+	transition: color .3s;
+}
+
+#bs-over .gallery .app-nav i:hover {
+	color: #9C27B0;
+}
+
 .about {
 	min-height: 500px;
 	background-color: #EEEEEE;
